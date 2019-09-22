@@ -1,6 +1,6 @@
 function Thermostat() {
     this.temperature = 20;
-    this.savingModeOn = false;
+    this.savingModeOn = true;
 };
 
 Thermostat.prototype.up = function(){
