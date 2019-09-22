@@ -1,9 +1,12 @@
 function Thermostat() {
     this.temperature = 20;
+    this.savingModeOn = false;
 };
 
 Thermostat.prototype.up = function(){
-    this.temperature++;
+    if((this.savingModeOn && this.temperature < 25) || !this.savingModeOn) {
+        this.temperature++;
+    } 
 };
 
 Thermostat.prototype.down = function(){
