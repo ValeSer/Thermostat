@@ -4,7 +4,7 @@ function Thermostat() {
 };
 
 Thermostat.prototype.up = function(){
-    if((this.savingModeOn && this.temperature < 25) || !this.savingModeOn) {
+    if((this.savingModeOn && this.temperature < 25) || (!this.savingModeOn && this.temperature < 32)) {
         this.temperature++;
     } 
 };
