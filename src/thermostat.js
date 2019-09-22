@@ -15,6 +15,11 @@ Thermostat.prototype.down = function(){
     };
 };
 
+Thermostat.prototype.reset = function() {
+    this.temperature = 20;
+}
+
 Thermostat.prototype._maxTemp = function() {
     return this.savingModeOn ? 25 : 32;
 };
+
